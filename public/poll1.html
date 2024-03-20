@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pollweb</title>
+    <link rel="icon" href="pollwebicon.png" type="x=icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="icon"
+      href="https://cdn.iconscout.com/icon/free/png-256/feedback-chat-comment-discussion-message-complaint-bubble-2-5284.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/20c06aecf1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="navbar">
+        <img src="logo.png" alt="logo" class="logo" />
+        <ul>
+          <li>
+            <a href="about.html">About us</a>
+          </li>
+          <li>
+            <a href="SERVICES.HTML">Services</a>
+          </li>
+          <li>
+            <a href="Enterprise.html">Enterprise</a>
+          </li>
+          <li>
+            <a href="HELPCENTRE.HTML">Help Centre</a>
+          </li>
+        </ul>
+      </div>
+      <div id="poll-container">
+        <div id="polling-details">
+          <div>
+            <h1>Live Polling:</h1>
+          </div>
+          <div>
+            <a onclick="color()">
+              <img
+                id="image-multicolor"
+                src="./images/multicolor-image.jpg"
+                alt="image"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          class="color"
+          id="colorBox"
+          style="margin-left: 300px; margin-top: 50px; display: none"
+        >
+          <div class="ab" id="firstcolor" data-color="orange"></div>
+          <div class="ab" id="secondcolor" data-color="crimson"></div>
+          <div class="ab" id="thirdcolor" data-color="lightgreen"></div>
+          <div class="ab" id="fourthcolor" data-color="rgb(0, 0, 75)"></div>
+          <div class="ab" id="fifthcolor" data-color="rgb(0, 255, 255)"></div>
+          <div class="ab" id="sixthcolor" data-color="#bcee68"></div>
+          <div class="ab" id="seventhcolor" data-color="#bf3eff"></div>
+          <div class="ab" id="eighthcolor" data-color="#8a8a8a"></div>
+          <div class="ab" id="ninth" data-color="#00FF00"></div>
+          <div class="ab" id="ten" data-color="#7FFFD4"></div>
+          <div class="ab" id="eleventh" data-color="#f7f707"></div>
+          <div class="ab" id="twelveth" data-color="#B0E0E6"></div>
+
+          <div class="theme" id="theme-1" data-theme="./images/TA5.jpg">
+            <img class="image-theme" src="./images/TA5.jpg" />
+          </div>
+          <div class="theme" id="theme-2" data-theme="./images/TA6.jpg">
+            <img class="image-theme" src="./images/TA6.jpg" />
+          </div>
+          <div class="theme" id="theme-3" data-theme="./images/TA7.jpg">
+            <img class="image-theme" src="./images/TA7.jpg" />
+          </div>
+
+          <div class="ab" id="no-color" data-color="white"></div>
+        </div>
+        <br />
+        <div id="question-container">
+          <label for="question">Question:</label>
+          <input type="text" id="question" placeholder="Enter your question" />
+        </div>
+        <div id="options-container">
+          <label for="options">Options:</label>
+          <textarea
+            id="options"
+            placeholder="Enter options separated by commas"
+          ></textarea>
+        </div>
+        <button onclick="startPoll()">Start Poll</button>
+        <br />
+        <div id="poll-form" style="display: none; margin-top: 30px;">
+          <h2 id="poll-question"></h2>
+          <div id="options-list"></div>
+          <br />
+          <button onclick="submitVote()">Submit Vote</button>
+        </div>
+        <div id="results-container" style="display: none">
+          <h2 style="margin-top: 30px">Results:</h2>
+          <br />
+          <canvas id="percentageChart" width="400" height="200"></canvas>
+          <div id="results-chart"></div>
+
+          <div class="container">
+            <div id="panel" class="panel-container">
+              <strong> Share your feedback </strong>
+              <div class="ratings-container">
+                <div class="rating">
+                  <img src="https://i.ibb.co/fYN2rVn/no.png" alt="" />
+                  <small>Unhappy</small>
+                </div>
+                <div class="rating">
+                  <img src="https://i.ibb.co/3M8Ddsf/no.png" alt="" />
+                  <small>Neutral</small>
+                </div>
+                <div class="rating">
+                  <img src="https://i.ibb.co/VVDYGLZ/yes.png" alt="" />
+                  <small>Satisfied</small>
+                </div>
+              </div>
+              <button class="btn" id="send">Send Review</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script1.js"></script>
+  </body>
+</html>
