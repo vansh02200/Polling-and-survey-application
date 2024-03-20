@@ -31,12 +31,12 @@ app.listen(2005, function(){
 
 app.get("/", function(req, resp)
 {
-    resp.sendFile(__dirname + "/Public/index.html");
+    resp.sendFile(__dirname + "/public/index.html");
 })
 
 app.get("/login", function(req, resp)
 {
-    resp.sendFile(__dirname + "/Public/login.html");
+    resp.sendFile(__dirname + "/public/login.html");
 })
 
 
